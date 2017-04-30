@@ -17,5 +17,16 @@ public class NumTest {
 			i++;
 		}
 	}
+	@Test
+	public void getInttest() {
+		int expected[] = {1,2,3,4,5,6,7,8,9,10,10,10,10};
+		int i = 0;
+		for(Num sut:Num.values()){
+			int actual	= sut.getNum();
+			assertThat(actual,is(expected[i]));
+			i++;
+		}
+	}
+
 
 }
