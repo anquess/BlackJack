@@ -31,7 +31,7 @@ public class CardTest {
 		for(Num num:Num.values()){
 			Card sut = new Card(HEART,num);
 			String actual		= sut.toString();
-			String expected	= "H" + num.toString();
+			String expected	= "【H" + num.toString() + "】";
 			assertThat(actual,is(expected));
 		}
 

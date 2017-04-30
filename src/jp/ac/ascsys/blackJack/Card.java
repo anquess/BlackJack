@@ -21,8 +21,10 @@ public class Card {
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
+		sb.append("【");
 		sb.append(this.suit.toString());
 		sb.append(this.num.toString());
+		sb.append("】");
 		return sb.toString();
 	}
 
