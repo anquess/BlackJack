@@ -1,6 +1,7 @@
 package jp.ac.ascsys.blackJack;
 
 import static jp.ac.ascsys.blackJack.Num.*;
+import static jp.ac.ascsys.blackJack.Suit.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
@@ -17,4 +18,13 @@ public class CardTest {
 			assertThat(actual,is(expected));
 		}
 	}
+	@Test
+	public void getNumTest(){
+		for(Num expected:Num.values()){
+			Card sut = new Card(SPADE,expected);
+			Num actual	= sut.getNum();
+			assertThat(actual,is(expected));
+		}
+	}
 }
+
