@@ -18,5 +18,13 @@ public class Card {
 		return num;
 	}
 
+	@Override
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append(this.suit.toString());
+		sb.append(this.num.toString());
+		return sb.toString();
+	}
+
 
 }
