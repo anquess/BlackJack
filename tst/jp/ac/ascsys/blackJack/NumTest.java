@@ -18,8 +18,8 @@ public class NumTest {
 		}
 	}
 	@Test
-	public void getInttest() {
-		int expected[] = {1,2,3,4,5,6,7,8,9,10,10,10,10};
+	public void getNumTest() {
+		int expected[] = {11,2,3,4,5,6,7,8,9,10,10,10,10};
 		int i = 0;
 		for(Num sut:Num.values()){
 			int actual	= sut.getNum();
@@ -27,6 +27,34 @@ public class NumTest {
 			i++;
 		}
 	}
-
-
+	@Test
+	public void 引数10のgetNumTest(){
+		int expected[] = {11,2,3,4,5,6,7,8,9,10,10,10,10};
+		int i = 0;
+		for(Num sut:Num.values()){
+			int actual	= sut.getNum(10);
+			assertThat(actual,is(expected[i]));
+			i++;
+		}
+	}
+	@Test
+	public void 引数0のgetNumTest(){
+		int expected[] = {11,2,3,4,5,6,7,8,9,10,10,10,10};
+		int i = 0;
+		for(Num sut:Num.values()){
+			int actual	= sut.getNum(0);
+			assertThat(actual,is(expected[i]));
+			i++;
+		}
+	}
+	@Test
+	public void 引数11のgetNumTest(){
+		int expected[] = {1,2,3,4,5,6,7,8,9,10,10,10,10};
+		int i = 0;
+		for(Num sut:Num.values()){
+			int actual	= sut.getNum(11);
+			assertThat(actual,is(expected[i]));
+			i++;
+		}
+	}
 }
