@@ -25,4 +25,12 @@ public class Hand {
 		return trump;
 	}
 
+	public int getScore() {
+		int score = 0;
+		for(Card card:this.cards){
+			score += card.getNum().getInt(score);
+		}
+		return score;
+	}
+
 }

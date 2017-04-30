@@ -7,11 +7,11 @@ public enum Num {
 			return this.name();
 		}
 		@Override
-		public int getNum(){
+		public int getInt(){
 			return 11;
 		}
 		@Override
-		public int getNum(int i){
+		public int getInt(int i){
 			if(i<11)return 11;
 			return 1;
 		}
@@ -22,11 +22,11 @@ public enum Num {
 			return this.name();
 		}
 		@Override
-		public int getNum(){
+		public int getInt(){
 			return 10;
 		}
 		@Override
-		public int getNum(int i){
+		public int getInt(int i){
 			return 10;
 		}
 	},Q{
@@ -35,11 +35,11 @@ public enum Num {
 			return this.name();
 		}
 		@Override
-		public int getNum(){
+		public int getInt(){
 			return 10;
 		}
 		@Override
-		public int getNum(int i){
+		public int getInt(int i){
 			return 10;
 		}
 	},K{
@@ -48,11 +48,11 @@ public enum Num {
 			return this.name();
 		}
 		@Override
-		public int getNum(){
+		public int getInt(){
 			return 10;
 		}
 		@Override
-		public int getNum(int i){
+		public int getInt(int i){
 			return 10;
 		}
 	};
@@ -60,10 +60,10 @@ public enum Num {
 	public String toString(){
 		return String.valueOf(this.ordinal()+1);
 	}
-	public int getNum(){
+	public int getInt(){
 		return this.ordinal()+1;
 	}
-	public int getNum(int i){
+	public int getInt(int i){
 		return this.ordinal()+1;
 	}
 }

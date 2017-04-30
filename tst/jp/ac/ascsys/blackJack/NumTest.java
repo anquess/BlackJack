@@ -18,41 +18,41 @@ public class NumTest {
 		}
 	}
 	@Test
-	public void getNumTest() {
+	public void getIntTest() {
 		int expected[] = {11,2,3,4,5,6,7,8,9,10,10,10,10};
 		int i = 0;
 		for(Num sut:Num.values()){
-			int actual	= sut.getNum();
+			int actual	= sut.getInt();
 			assertThat(actual,is(expected[i]));
 			i++;
 		}
 	}
 	@Test
-	public void 引数10のgetNumTest(){
+	public void 引数10のgetIntTest(){
 		int expected[] = {11,2,3,4,5,6,7,8,9,10,10,10,10};
 		int i = 0;
 		for(Num sut:Num.values()){
-			int actual	= sut.getNum(10);
+			int actual	= sut.getInt(10);
 			assertThat(actual,is(expected[i]));
 			i++;
 		}
 	}
 	@Test
-	public void 引数0のgetNumTest(){
+	public void 引数0のgetIntTest(){
 		int expected[] = {11,2,3,4,5,6,7,8,9,10,10,10,10};
 		int i = 0;
 		for(Num sut:Num.values()){
-			int actual	= sut.getNum(0);
+			int actual	= sut.getInt(0);
 			assertThat(actual,is(expected[i]));
 			i++;
 		}
 	}
 	@Test
-	public void 引数11のgetNumTest(){
+	public void 引数11のgetIntTest(){
 		int expected[] = {1,2,3,4,5,6,7,8,9,10,10,10,10};
 		int i = 0;
 		for(Num sut:Num.values()){
-			int actual	= sut.getNum(11);
+			int actual	= sut.getInt(11);
 			assertThat(actual,is(expected[i]));
 			i++;
 		}
