@@ -1,6 +1,6 @@
-package jp.ac.ascsys.blackJack;
+package jp.ac.ascsys.blackJack.model;
 
-import static jp.ac.ascsys.blackJack.Face.*;
+import static jp.ac.ascsys.blackJack.model.Face.*;
 
 public class Card {
 	private Suit suit;

@@ -1,4 +1,4 @@
-package jp.ac.ascsys.blackJack;
+package jp.ac.ascsys.blackJack.model;
 
 public enum Num {
 	A{

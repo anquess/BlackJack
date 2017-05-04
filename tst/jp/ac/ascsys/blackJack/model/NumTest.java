@@ -1,9 +1,11 @@
-package jp.ac.ascsys.blackJack;
+package jp.ac.ascsys.blackJack.model;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import jp.ac.ascsys.blackJack.model.Num;
 
 public class NumTest {
 

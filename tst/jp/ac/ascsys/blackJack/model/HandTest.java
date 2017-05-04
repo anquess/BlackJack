@@ -1,7 +1,7 @@
-package jp.ac.ascsys.blackJack;
+package jp.ac.ascsys.blackJack.model;
 
-import static jp.ac.ascsys.blackJack.Num.*;
-import static jp.ac.ascsys.blackJack.Suit.*;
+import static jp.ac.ascsys.blackJack.model.Num.*;
+import static jp.ac.ascsys.blackJack.model.Suit.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
@@ -11,6 +11,11 @@ import org.junit.experimental.theories.DataPoints;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
+
+import jp.ac.ascsys.blackJack.model.Card;
+import jp.ac.ascsys.blackJack.model.Hand;
+import jp.ac.ascsys.blackJack.model.Num;
+import jp.ac.ascsys.blackJack.model.Suit;
 
 @RunWith(Theories.class)
 public class HandTest {

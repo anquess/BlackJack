@@ -1,4 +1,4 @@
-package jp.ac.ascsys.blackJack;
+package jp.ac.ascsys.blackJack.model;
 
 import java.util.ArrayList;
 import java.util.List;

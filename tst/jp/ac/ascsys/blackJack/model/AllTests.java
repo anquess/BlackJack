@@ -1,4 +1,4 @@
-package jp.ac.ascsys.blackJack;
+package jp.ac.ascsys.blackJack.model;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
