@@ -10,9 +10,20 @@ public class Hand {
 		cards.add(card);
 	}
 
+	public void addHand(Hand hand){
+		for(Card card:hand.cards){
+			cards.add(card);
+		}
+	}
+
 	public Card getCard(int i) {
 		return cards.get(i);
 	}
+
+	List<Card> getCards() {
+		return this.cards;
+	}
+
 
 	public static Hand makeTrump() {
 		Hand trump = new Hand();
@@ -21,7 +32,6 @@ public class Hand {
 				trump.addCard(new Card(suit, num));
 			}
 		}
-
 		return trump;
 	}
 
