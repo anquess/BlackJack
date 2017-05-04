@@ -27,8 +27,16 @@ public class Hand {
 
 	public int getScore() {
 		int score = 0;
-		for(Card card:this.cards){
-			score += card.getNum().getInt(score);
+		boolean haveA = false;
+		for(Card card:cards){
+			score += card.getNum().getInt(haveA);
+			if(card.getNum().getInt(haveA) == 11)haveA=true;
+		}
+		if(score>22){
+			score=0;
+			for(Card card:cards){
+				score += card.getNum().getInt(true);
+			}
 		}
 		return score;
 	}
