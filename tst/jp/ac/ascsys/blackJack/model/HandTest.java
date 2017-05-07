@@ -12,11 +12,6 @@ import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
-import jp.ac.ascsys.blackJack.model.Card;
-import jp.ac.ascsys.blackJack.model.Hand;
-import jp.ac.ascsys.blackJack.model.Num;
-import jp.ac.ascsys.blackJack.model.Suit;
-
 @RunWith(Theories.class)
 public class HandTest {
 	private Hand sut;
@@ -31,23 +26,21 @@ public class HandTest {
 		sut.addCard(expectedCard[0]);
 		sut.addCard(expectedCard[1]);
 		Card actual;
-		int i = 0;
 		for(Card expected : expectedCard){
-			actual = sut.getCard(i);
+			actual = sut.removeCard(0);
 			assertThat(actual,is(expected));
-			i++;
 		}
 	}
 
 	@Test
 	public void トランプをつくるtest(){
 		sut = Hand.makeTrump();
-		int i = 0;
+		Card sutCard;
 		for(Suit suit:Suit.values()){
 			for(Num num:Num.values()){
-				assertThat(sut.getCard(i).getSuit(),is(suit));
-				assertThat(sut.getCard(i).getNum(),is(num));
-				i++;
+				sutCard = sut.removeCard(0);
+				assertThat(sutCard.getSuit(),is(suit));
+				assertThat(sutCard.getNum(),is(num));
 			}
 		}
 	}

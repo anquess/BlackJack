@@ -3,6 +3,7 @@ package jp.ac.ascsys.blackJack.model;
 public abstract class Character {
 	private String name;
 	private Hand hand;
+	private Tactics tactics;
 
 	public Character(String name){
 		this.name = name;
@@ -22,5 +23,8 @@ public abstract class Character {
 	@Override
 	public String toString(){
 		return this.name;
+	}
+	public Command selectCommand(Table table){
+		return tactics.getCommand(table,this);
 	}
 }

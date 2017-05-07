@@ -16,8 +16,8 @@ public class Hand {
 		}
 	}
 
-	public Card getCard(int i) {
-		return cards.get(i);
+	public Card removeCard(int i) {
+		return cards.remove(i);	//cards.get(i);
 	}
 
 	List<Card> getCards() {
