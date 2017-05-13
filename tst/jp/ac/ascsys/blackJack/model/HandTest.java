@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Theories.class)
 public class HandTest {
-	private CardSet sut;
+	private Hand sut;
 
 	@Before
 	public void setUp(){
@@ -29,19 +29,6 @@ public class HandTest {
 		for(Card expected : expectedCard){
 			actual = sut.removeCard(0);
 			assertThat(actual,is(expected));
-		}
-	}
-
-	@Test
-	public void トランプをつくるtest(){
-		sut = Trump.makeTrump();
-		Card sutCard;
-		for(Suit suit:Suit.values()){
-			for(Num num:Num.values()){
-				sutCard = sut.removeCard(0);
-				assertThat(sutCard.getSuit(),is(suit));
-				assertThat(sutCard.getNum(),is(num));
-			}
 		}
 	}
 
@@ -71,7 +58,7 @@ public class HandTest {
 		for(Num num:p.nums){
 			sut.addCard(new Card(SPADE,num));
 		}
-		int actual		= ((Hand) sut).getScore();
+		int actual		= sut.getScore();
 		int expected	= p.expected;
 		assertThat(p.msg,actual,is(expected));
 	}
