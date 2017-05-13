@@ -2,11 +2,11 @@ package jp.ac.ascsys.blackJack.model;
 
 public class Dealer extends Character {
 	private Player player;
-	private Hand trump;
+	private CardSet trump;
 
 	public Dealer(String name) {
 		super(name);
-		trump = Hand.makeTrump();
+		trump = Trump.makeTrump();
 		trump = shuffle();
 	}
 
@@ -14,8 +14,8 @@ public class Dealer extends Character {
 		this.player = player;
 	}
 
-	private Hand shuffle(){
-		Hand shuffledTrump = new Hand();
+	private CardSet shuffle(){
+		CardSet shuffledTrump = new Trump();
 		for (int i = 0; i < 52; i++) {
 			shuffledTrump.addCard(selectRadomCard(52 - i));
 		}
