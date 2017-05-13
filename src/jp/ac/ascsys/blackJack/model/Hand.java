@@ -1,50 +1,17 @@
 package jp.ac.ascsys.blackJack.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Hand {
-	private List<Card> cards = new ArrayList<>();
-
-	public void addCard(Card card) {
-		cards.add(card);
-	}
-
-	public void addHand(Hand hand){
-		for(Card card:hand.cards){
-			cards.add(card);
-		}
-	}
-
-	public Card removeCard(int i) {
-		return cards.remove(i);	//cards.get(i);
-	}
-
-	List<Card> getCards() {
-		return this.cards;
-	}
-
-
-	public static Hand makeTrump() {
-		Hand trump = new Hand();
-		for(Suit suit:Suit.values()){
-			for(Num num:Num.values()){
-				trump.addCard(new Card(suit, num));
-			}
-		}
-		return trump;
-	}
+public class Hand extends CardSet {
 
 	public int getScore() {
 		int score = 0;
 		boolean haveA = false;
-		for(Card card:cards){
+		for(Card card:super.cards){
 			score += card.getNum().getInt(haveA);
 			if(card.getNum().getInt(haveA) == 11)haveA=true;
 		}
 		if(score>22){
 			score=0;
-			for(Card card:cards){
+			for(Card card:super.cards){
 				score += card.getNum().getInt(true);
 			}
 		}

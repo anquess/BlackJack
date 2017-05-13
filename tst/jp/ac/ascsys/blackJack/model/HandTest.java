@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Theories.class)
 public class HandTest {
-	private Hand sut;
+	private CardSet sut;
 
 	@Before
 	public void setUp(){
@@ -34,7 +34,7 @@ public class HandTest {
 
 	@Test
 	public void トランプをつくるtest(){
-		sut = Hand.makeTrump();
+		sut = Trump.makeTrump();
 		Card sutCard;
 		for(Suit suit:Suit.values()){
 			for(Num num:Num.values()){
@@ -71,7 +71,7 @@ public class HandTest {
 		for(Num num:p.nums){
 			sut.addCard(new Card(SPADE,num));
 		}
-		int actual		= sut.getScore();
+		int actual		= ((Hand) sut).getScore();
 		int expected	= p.expected;
 		assertThat(p.msg,actual,is(expected));
 	}
