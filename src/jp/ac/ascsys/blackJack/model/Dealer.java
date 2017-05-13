@@ -1,5 +1,7 @@
 package jp.ac.ascsys.blackJack.model;
 
+import java.util.Collections;
+
 public class Dealer extends Character {
 	private Player player;
 	private CardSet trump;
@@ -15,16 +17,10 @@ public class Dealer extends Character {
 	}
 
 	private CardSet shuffle(){
-		CardSet shuffledTrump = new Trump();
-		for (int i = 0; i < 52; i++) {
-			shuffledTrump.addCard(selectRadomCard(52 - i));
-		}
-		return shuffledTrump;
+		Collections.shuffle(this.trump.getCards());
+		return this.trump;
 	}
 
-	private Card selectRadomCard(int i){
-		return this.trump.removeCard(new java.util.Random().nextInt(i));
-	}
 	public Card pickUpCard(){
 		return this.trump.removeCard(0);
 	}
