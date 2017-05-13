@@ -1,12 +1,12 @@
 package jp.ac.ascsys.blackJack.model;
 
 public class Table {
-	private Hand garbage;
+	private CardSet garbage;
 	private Dealer dealer;
 	private Player player;
 
 	public Table(){
-		this.garbage = new Hand();
+		this.garbage = new GabageCardSet();
 	}
 
 	public Dealer getDealer() {
@@ -29,7 +29,7 @@ public class Table {
 		garbage.addHand(character.getHand());
 		character.clearHand();
 	}
-	public Hand getGarbage(){
+	public CardSet getGarbage(){
 		return this.garbage;
 	}
 
